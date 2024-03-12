@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    
+   
+    <title>Reporte diario Petrosar</title>
+
+    <!-- Enlaces a Bootstrap CSS y JS -->
+    <link href="boostrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <link href="styles.css" rel="stylesheet">
+    <script src="boostrap.min.js"></script>
+    <script src="jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+   
+    <!-- Estilos personalizados -->
+   
+</head>
+<body>
+    <!-- Contenido de la factura -->
+    <div id="reporte">
+
+        <div class="toolbar hidden-print">
+            <div class="text-right">
+                <button id="printreporte" class="btn btn-info"><i class="fa fa-print"></i> Print</button>
+                <button class="btn btn-info"><i class="fa fa-file-pdf-o"></i> Export as PDF</button>
+            </div>
+            <hr>
+        </div>
+        <div class="reporte overflow-auto">
+            <div style="min-width: 600px">
+                <header>
+                    <div class="row">
+                        <div class="col">
+                            <a target="_blank" href="https://smartanalytics.com.ar">
+                                <img src="Logo_Horizontal.png" data-holder-rendered="true" style="width: 300px; height: 150px;" />
+                                </a>
+                        </div>
+                        <div class="col company-details">
+                            <h2 class="name">
+                                <a href="#" target="_blank" onclick="return false;">
+                                Reporte diario de unidad
+                                </a>
+                            </h2>
+                            <div>ID:<td>&lt;&lt;[ID Control]&gt;&gt;</td></div>
+                            <div>Tipo de control:&lt;&lt;[Tipo_Control_Diario]&gt;&gt;</div>
+                           
+                        </div>
+                    </div>
+                </header>
+                <main>
+                    <div class="row contacts">
+                        <div class="col reporte-to">
+                            <div class="text-gray-light">REALIZADO POR:</div>
+                            <h2 class="to">John Doe</h2>
+                            <div class="address">Legajo: &lt;&lt;[Legajo]&gt;&gt; - Rol: &lt;&lt;[Rol]&gt;&gt;</div>
+                            <div class="email"><a href="mailto:&lt;&lt;[Conductor]&gt;&gt;">&lt;&lt;[Conductor]&gt;&gt;</a></div>
+                        </div>
+                        <div class="col reporte-details">
+                            <h1 class="reporte-id">Petrosar S.A.</h1>
+                            <div class="date">&lt;&lt;[Patente]&gt;&gt;</div>
+                            <div class="date">&lt;&lt;[Fecha y hora]&gt;&gt;</div>
+                        </div>
+                    </div>
+                    <table border="0" cellspacing="0" cellpadding="0">
+                        <thead>
+                            <tr>
+                                <th style="width: 150px;">UBICACIÓN DEL REPORTE</th> 
+                              
+                                
+                                <th class="text-center" colspan="5">RESUMEN DEL REPORTE</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="no" style="max-height: 150px; max-width: 150px;">&lt;&lt;[Ubicacion]&gt;&gt;</td>
+                                <td class="text-left">
+                                    <h3>Tipo de unidad</h3>
+                                    &lt;&lt;[Tipo_Unidad]&gt;&gt;
+                        
+                                </td>
+                                <td class="text-left">
+                                    <h3>Patente</h3>
+                                    &lt;&lt;[Patente]&gt;&gt;
+                     
+                                </td>
+                                <td class="text-left">
+                                    <h3>Kilometraje reportado</h3>
+                                    &lt;&lt;[Kilometraje]&gt;&gt;
+                                   
+                                </td>
+                                <td class="text-left">
+                                    <h3>Avisos de mantenimiento</h3>
+                                   &lt;&lt;[Mantenimiento]&gt;&gt;
+                                </td>
+                                <td id="estado-unidad" class="text-left">
+                                    <h3>Estado de la unidad</h3>
+                                    <div id="estado-div">&lt;&lt;[Estado de unidad]&gt;&gt;</div>
+                                </td>
+                                
+                            </tr>
+                        </tbody>
+                    </table>
+                    
+                    
+                    <br><br>
+                    <table border="0" cellspacing="0" cellpadding="0">
+                        <thead>
+                            <tr>
+                                <th style="width: 150px;">ESTADO</th> 
+                                
+                                <th class="text-right">ITEM AUDITADO</th>
+                                <th class="text-left">OBSERVACIÓN</th>
+                                <th class="text-right">FOTO</th>
+                                
+                            </tr>
+                        </thead>
+                        <tbody>
+                           
+                            <tr>
+                                <td class="no" style="max-height: 100px; max-width: 150px;">&lt;&lt;[Condiciones optimas de conducción]&gt;&gt;</td>
+                                <td class="unit">ITEM AUDITADO</td>
+                                <td class="text-left"><h3>&lt;&lt;[Observacion]&gt;&gt;</h3></td>
+                                <td class="qty">&lt;&lt;[Foto]&gt;&gt;</td>
+                            </tr>
+                            
+                            <tr>
+                                <td class="no" style="max-height: 100px; max-width: 150px;">&lt;&lt;[Estado de cubierta y torque]&gt;&gt;</td>
+                                <td class="unit">ITEM AUDITADO</td>
+                                <td class="text-left"><h3>&lt;&lt;[Observacion_25]&gt;&gt;</h3></td>
+                                <td class="qty">&lt;&lt;[Foto_26]&gt;&gt;</td>
+                            </tr>
+                            
+                            <tr>
+                                <td class="no" style="max-height: 100px; max-width: 150px;">&lt;&lt;[Frenos]&gt;&gt;</td>
+                                <td class="unit">ITEM AUDITADO</td>
+                                <td class="text-left"><h3>&lt;&lt;[Observacion_29]&gt;&gt;</h3></td>
+                                <td class="qty">&lt;&lt;[Foto_30]&gt;&gt;</td>
+                            </tr>
+                            
+                            <tr>
+                                <td class="no" style="max-height: 100px; max-width: 150px;">&lt;&lt;[Dirección]&gt;&gt;</td>
+                                <td class="unit">ITEM AUDITADO</td>
+                                <td class="text-left"><h3>&lt;&lt;[Observacion_33]&gt;&gt;</h3></td>
+                                <td class="qty">&lt;&lt;[Foto_34]&gt;&gt;</td>
+                            </tr>
+                            
+                            <tr>
+                                <td class="no" style="max-height: 100px; max-width: 150px;">&lt;&lt;[Luces en general (Alta,Baja,Guiños,Balizas,Retroceso) e Interior]&gt;&gt;</td>
+                                <td class="unit">ITEM AUDITADO</td>
+                                <td class="text-left"><h3>&lt;&lt;[Observacion_37]&gt;&gt;</h3></td>
+                                <td class="qty">&lt;&lt;[Foto_38]&gt;&gt;</td>
+                            </tr>
+                            
+                            <tr>
+                                <td class="no" style="max-height: 100px; max-width: 150px;">&lt;&lt;[Alarma acustica de retroceso/bocina]&gt;&gt;</td>
+                                <td class="unit">ITEM AUDITADO</td>
+                                <td class="text-left"><h3>&lt;&lt;[Observacion_40]&gt;&gt;</h3></td>
+                                <td class="qty">&lt;&lt;[Foto_41]&gt;&gt;</td>
+                            </tr>
+                            
+                            <tr>
+                                <td class="no" style="max-height: 100px; max-width: 150px;">&lt;&lt;[Indicadores tablero]&gt;&gt;</td>
+                                <td class="unit">ITEM AUDITADO</td>
+                                <td class="text-left"><h3>&lt;&lt;[Observacion_43]&gt;&gt;</h3></td>
+                                <td class="qty">&lt;&lt;[Foto_44]&gt;&gt;</td>
+                            </tr>
+                            
+                            <tr>
+                                <td class="no" style="max-height: 100px; max-width: 150px;">&lt;&lt;[Parabrisas - Ventanillas]&gt;&gt;</td>
+                                <td class="unit">ITEM AUDITADO</td>
+                                <td class="text-left"><h3>&lt;&lt;[Observacion_46]&gt;&gt;</h3></td>
+                                <td class="qty">&lt;&lt;[Foto_47]&gt;&gt;</td>
+                            </tr>
+                            
+                            <tr>
+                                <td class="no" style="max-height: 100px; max-width: 150px;">&lt;&lt;[Limpiaparabrisas]&gt;&gt;</td>
+                                <td class="unit">ITEM AUDITADO</td>
+                                <td class="text-left"><h3>&lt;&lt;[Observacion_49]&gt;&gt;</h3></td>
+                                <td class="qty">&lt;&lt;[Foto_50]&gt;&gt;</td>
+                            </tr>
+                            
+                            <tr>
+                                <td class="no" style="max-height: 100px; max-width: 150px;">&lt;&lt;[Desempañador]&gt;&gt;</td>
+                                <td class="unit">ITEM AUDITADO</td>
+                                <td class="text-left"><h3>&lt;&lt;[Observacion_52]&gt;&gt;</h3></td>
+                                <td class="qty">&lt;&lt;[Foto_53]&gt;&gt;</td>
+                            </tr>
+                            
+                            <tr>
+                                <td class="no" style="max-height: 100px; max-width: 150px;">&lt;&lt;[Espejos retrovisores]&gt;&gt;</td>
+                                <td class="unit">ITEM AUDITADO</td>
+                                <td class="text-left"><h3>&lt;&lt;[Observacion_55]&gt;&gt;</h3></td>
+                                <td class="qty">&lt;&lt;[Foto_56]&gt;&gt;</td>
+                            </tr>
+                            
+                            <tr>
+                                <td class="no" style="max-height: 100px; max-width: 150px;">&lt;&lt;[Auxilio - Crique - Llave de Rueda - Baliza Triangulo -Extintor]&gt;&gt;</td>
+                                <td class="unit">ITEM AUDITADO</td>
+                                <td class="text-left"><h3>&lt;&lt;[Observacion_58]&gt;&gt;</h3></td>
+                                <td class="qty">&lt;&lt;[Foto_59]&gt;&gt;</td>
+                            </tr>
+                            
+                            <tr>
+                                <td class="no" style="max-height: 100px; max-width: 150px;">&lt;&lt;[Tacógrafo]&gt;&gt;</td>
+                                <td class="unit">ITEM AUDITADO</td>
+                                <td class="text-left"><h3>&lt;&lt;[Observacion_61]&gt;&gt;</h3></td>
+                                <td class="qty">&lt;&lt;[Foto_62]&gt;&gt;</td>
+                            </tr>
+                            
+                            <tr>
+                                <td class="no" style="max-height: 100px; max-width: 150px;">&lt;&lt;[Sistema Comunicación ( Tetra )]&gt;&gt;</td>
+                                <td class="unit">ITEM AUDITADO</td>
+                                <td class="text-left"><h3>&lt;&lt;[Observacion_64]&gt;&gt;</h3></td>
+                                <td class="qty">&lt;&lt;[Foto_65]&gt;&gt;</td>
+                            </tr>
+                            
+                        </tbody>
+                        <tfoot>
+                     
+                            <tr>
+                                <td colspan="2"></td>
+                               
+                            </tr>
+                        </tfoot>
+                    </table>
+                    <table border="0" cellspacing="0" cellpadding="0">
+                        <thead>
+                            <tr>
+                                <th style="width: 150px;">OBSERVACIONES ADICIONALES</th> 
+                                
+                                <th class="text-center" colspan="5">FOTOS</th>
+                               
+                                
+                            </tr>
+                        </thead>
+                        <tbody>
+                           
+                            <tr>
+                                <td class="no" style="max-height: 100px; max-width: 150px;">&lt;&lt;[Condiciones optimas de conducción]&gt;&gt;</td>
+                                <td class="qty">&lt;&lt;[Foto]&gt;&gt;</td>
+                                <td class="qty">&lt;&lt;[Foto]&gt;&gt;</td>
+                                <td class="qty">&lt;&lt;[Foto]&gt;&gt;</td>
+                                <td class="qty">&lt;&lt;[Foto]&gt;&gt;</td>
+                                <td class="qty">&lt;&lt;[Foto]&gt;&gt;</td>
+                            </tr>
+                            
+                   
+                            
+                        </tbody>
+                        <tfoot>
+                     
+                            <tr>
+                                <td colspan="2"></td>
+                               
+                            </tr>
+                        </tfoot>
+                    </table>
+                    <br><br><br>
+                    <div class="thanks">&lt;&lt;[Firma de conductor]&gt;&gt;</div>
+                    <div class="notices">
+                        <div>FIRMA DEL CONDUCTOR</div>
+                        
+                    </div>
+                </main>
+                <footer>
+                    Nuestras aplicaciones sustituyen los formatos tradicionales en papel. Permitiendo mejorar el desempeño profesional durante la recolección de datos, su análisis y procesamiento.
+                </footer>
+            </div>
+            <!--DO NOT DELETE THIS div. IT is responsible for showing footer always at the bottom-->
+            <div></div>
+        </div>
+    </div>
+</body>
+<script>
+     $('#printreporte').click(function(){
+            Popup($('.reporte')[0].outerHTML);
+            function Popup(data) 
+            {
+                window.print();
+                return true;
+            }
+        });
+</script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var estadoDiv = document.getElementById('estado-div');
+        var estadoValor = estadoDiv.innerText.trim();
+
+        if (estadoValor === 'Requiere Atención') {
+            estadoDiv.style.color = 'orange';
+            estadoDiv.innerHTML += ' <span style="color: orange;">&#x26A0;&#xFE0F;</span>'; // Triángulo de advertencia
+        } else if (estadoValor === 'Atención Inmediata') {
+            estadoDiv.style.color = 'red';
+            estadoDiv.innerHTML += ' <span style="color: red;">&#x2757;&#xFE0F;</span>'; // Signo de exclamación
+        } else if (estadoValor === 'Condiciones optimas') {
+            estadoDiv.style.color = 'green';
+            estadoDiv.innerHTML += ' <span style="color: green;">&#x2713;</span>'; // Icono de check verde
+        }
+    });
+</script>
+
+
+</html>
